@@ -21,6 +21,7 @@ export const Pdf = {
    * Unload the Stores
    */
   unload: (app: FabrixApp) => {
+    toPdf.kill()
     return Promise.resolve()
   },
 
@@ -28,16 +29,20 @@ export const Pdf = {
     return new Promise((resolve, reject) => {
       toPdf({
         html: html,
+        header: app.config.get('pdf.header'),
+        footer: app.config.get('pdf.footer'),
+        waitForJS: app.config.get('pdf.waitForJS'),
+        waitForJSVarName: app.config.get('pdf.waitForJSVarName'),
         allowLocalFilesAccess: app.config.get('pdf.allowLocalFilesAccess'),
         printDelay: app.config.get('pdf.printDelay'),
-        paperSize: {
-          format: app.config.get('pdf.paperSize.format'),
-          height: app.config.get('pdf.paperSize.height'),
-          width: app.config.get('pdf.paperSize.width')
-        },
-        format: {
-          quality: app.config.get('pdf.format.quality')
-        }
+        paperSize: app.config.get('pdf.paperSize'),
+        customerHeaders: app.config.get('pdf.customHeaders'),
+        fitToPage: app.config.get('pdf.fitToPage'),
+        injectJs: app.config.get('pdf.injectJs'),
+        cookies: app.config.get('pdf.cookies'),
+        settings: app.config.get('pdf.settings'),
+        viewportSize: app.config.get('pdfviewportSize'),
+        format: app.config.get('pdf.format')
       }, (err, pdf) => {
         if (err) {
           return reject(err)
