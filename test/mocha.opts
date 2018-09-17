@@ -1,0 +1,8 @@
+--reporter spec
+--recursive
+--full-trace
+--check-leaks
+--timeout 10000
+--globals app,__core-js_shared__,__coverage__,$$bole
+
+test/index.js test/**/*.test.js

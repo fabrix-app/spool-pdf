@@ -1,0 +1,1 @@
+export { pdfConfig } from './pdfConfig'
