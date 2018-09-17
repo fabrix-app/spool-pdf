@@ -14,7 +14,7 @@ export const Pdf = {
 
   init: (app: FabrixApp) => {
     // init pdf server
-    return
+    return Promise.resolve()
   },
 
   /**

@@ -1,6 +1,6 @@
 {
   "name": "@fabrix/spool-pdf",
-  "version": "1.5.0-alpha.1",
+  "version": "1.5.0",
   "description": "Spool: Pdf for Fabrix to implement HashiCorp's https://pdfproject.io/",
   "homepage": "https://fabrix.app",
   "author": {
@@ -9,8 +9,9 @@
     "url": "https://cali-style.com"
   },
   "keywords": [
-    "valut",
-    "HashiCorp",
+    "html",
+    "PDF",
+    "spool",
     "fabrix",
     "trailjs"
   ],
