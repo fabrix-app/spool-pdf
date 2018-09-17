@@ -22,7 +22,7 @@ export class PdfSpool extends ExtensionSpool {
         },
         set: (newInstances) => {
           this.pdf = newInstances
-          // throw new Error('scheduler can not be set through FabrixApp, check spool-engine instead')
+          // throw new Error('pdf can not be set through FabrixApp, check spool-pdf instead')
         },
         enumerable: true,
         configurable: true
@@ -38,7 +38,7 @@ export class PdfSpool extends ExtensionSpool {
     // const spools = Object.keys(this.app.spools)
     //
     // if (!spools.some(v => requiredSpools.indexOf(v) >= 0)) {
-    //   return Promise.reject(new Error(`spool-caches requires spools: ${ requiredSpools.join(', ') }!`))
+    //   return Promise.reject(new Error(`spool-pdf requires spools: ${ requiredSpools.join(', ') }!`))
     // }
 
     if (!this.app.config.get('pdf')) {
